@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	journey "github.com/pmorelli92/journey/commands"
 	_ "github.com/db-journey/postgresql-driver"
+	journey "github.com/pmorelli92/journey/commands"
 	"github.com/urfave/cli"
 )
 
@@ -19,7 +19,7 @@ func main() {
 func App() *cli.App {
 	app := cli.NewApp()
 	app.Usage = "Migrations and cronjobs for databases (postgres)"
-	app.Version = "2.4.0"
+	app.Version = "2.2.4"
 
 	app.Flags = journey.Flags()
 
