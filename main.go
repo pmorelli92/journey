@@ -4,13 +4,8 @@ import (
 	"log"
 	"os"
 
-	_ "github.com/db-journey/bash-driver"
-	_ "github.com/db-journey/cassandra-driver"
-	_ "github.com/db-journey/crate-driver"
-	journey "github.com/db-journey/journey/v2/commands"
-	_ "github.com/db-journey/mysql-driver"
+	journey "github.com/pmorelli92/journey/commands"
 	_ "github.com/db-journey/postgresql-driver"
-	_ "github.com/db-journey/sqlite3-driver"
 	"github.com/urfave/cli"
 )
 
@@ -23,8 +18,8 @@ func main() {
 
 func App() *cli.App {
 	app := cli.NewApp()
-	app.Usage = "Migrations and cronjobs for databases"
-	app.Version = "2.1.1"
+	app.Usage = "Migrations and cronjobs for databases (postgres)"
+	app.Version = "2.4.0"
 
 	app.Flags = journey.Flags()
 
